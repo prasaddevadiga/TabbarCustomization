@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabbarCustomization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-Dq-RO9">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="qRH-bb-kpz" kind="show" id="ncL-Og-bc5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIm-Dq-RO9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Lh-f4-ixU"/>
+                            <constraint firstItem="YIm-Dq-RO9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O1p-Zu-C0Y"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000" y="-110"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="C9C-k2-9V8">
+            <objects>
+                <viewController id="2CS-2m-SvD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z8r-tl-H5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOg-ge-0h9">
+                                <rect key="frame" x="184.5" y="60" width="45" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                                <color key="textColor" red="0.72549019607843135" green="0.62745098039215685" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page is not implemented yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-xe-htf">
+                                <rect key="frame" x="101" y="132.5" width="212.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
+                                <color key="textColor" red="0.72549019607843135" green="0.62745098039215685" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WPf-RT-67K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Yz-xe-htf" firstAttribute="centerX" secondItem="Z8r-tl-H5z" secondAttribute="centerX" id="FB2-E5-zme"/>
+                            <constraint firstItem="6Yz-xe-htf" firstAttribute="top" secondItem="zOg-ge-0h9" secondAttribute="bottom" constant="50" id="IPN-aN-9wK"/>
+                            <constraint firstItem="zOg-ge-0h9" firstAttribute="top" secondItem="WPf-RT-67K" secondAttribute="top" constant="60" id="Z8u-aS-GG2"/>
+                            <constraint firstItem="zOg-ge-0h9" firstAttribute="centerX" secondItem="Z8r-tl-H5z" secondAttribute="centerX" id="oMY-4A-1MO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chats" image="chat" selectedImage="chat_selected" id="4RL-3e-KCo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iH5-wb-xua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="174"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="zZJ-h2-L0w">
+            <objects>
+                <viewController id="bHy-QH-RJU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWV-Ix-dQr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-Dc-bnp">
+                                <rect key="frame" x="175.5" y="60" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BVi-29-Bbc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nDo-Dc-bnp" firstAttribute="centerX" secondItem="xWV-Ix-dQr" secondAttribute="centerX" id="QcT-qg-f7y"/>
+                            <constraint firstItem="nDo-Dc-bnp" firstAttribute="top" secondItem="BVi-29-Bbc" secondAttribute="top" constant="60" id="nLr-t7-pqY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings_selected" id="wic-Jc-XbL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWf-bu-jB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163" y="830"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="mqA-in-cLe">
+            <objects>
+                <viewController id="P7q-ON-B60" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1wu-hX-Mne">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb8-e8-e3x">
+                                <rect key="frame" x="169.5" y="60" width="75.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This page is not implemented yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXR-qM-e6i">
+                                <rect key="frame" x="81" y="132.5" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mYY-FN-L1F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qb8-e8-e3x" firstAttribute="centerX" secondItem="1wu-hX-Mne" secondAttribute="centerX" id="Afi-8s-PFg"/>
+                            <constraint firstItem="sXR-qM-e6i" firstAttribute="top" secondItem="Qb8-e8-e3x" secondAttribute="bottom" constant="50" id="cCa-13-vtA"/>
+                            <constraint firstItem="Qb8-e8-e3x" firstAttribute="top" secondItem="mYY-FN-L1F" secondAttribute="top" constant="60" id="lP5-OI-9lh"/>
+                            <constraint firstItem="sXR-qM-e6i" firstAttribute="centerX" secondItem="1wu-hX-Mne" secondAttribute="centerX" id="z41-1p-27Q"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Articles" image="article" selectedImage="article_selected" id="Yhs-ei-u6c">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ix8-k9-d2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="822"/>
+        </scene>
+        <!--Yoga-->
+        <scene sceneID="53L-kk-TMr">
+            <objects>
+                <viewController id="Iqx-xV-sqI" customClass="HomeViewController" customModule="TabbarCustomization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2vE-rr-vzg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPQ-OA-sMs">
+                                <rect key="frame" x="16" y="16" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="K4c-ET-ZR8"/>
+                                    <constraint firstAttribute="height" constant="33" id="bw2-x8-9vk"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="Iqx-xV-sqI" eventType="touchUpInside" id="33S-sZ-HmY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wCx-ye-IAk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xPQ-OA-sMs" firstAttribute="top" secondItem="wCx-ye-IAk" secondAttribute="top" constant="16" id="ZL2-GE-LQ8"/>
+                            <constraint firstItem="xPQ-OA-sMs" firstAttribute="leading" secondItem="wCx-ye-IAk" secondAttribute="leading" constant="16" id="nNy-cp-cnx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yoga" image="yoga" landscapeImage="apps.iphone.landscape" catalog="system" selectedImage="yoga_selected" id="sft-dj-fFS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQX-iG-uZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="-433"/>
+        </scene>
+        <!--Custom Tab Bar View Controller-->
+        <scene sceneID="Hwo-yd-406">
+            <objects>
+                <tabBarController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="qRH-bb-kpz" customClass="CustomTabBarViewController" customModule="TabbarCustomization" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="x28-g8-G95"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AAH-4j-oLb" customClass="CustomTabbar" customModule="TabbarCustomization" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.72549019607843135" green="0.62745098039215685" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Iqx-xV-sqI" kind="relationship" relationship="viewControllers" id="su8-Cp-SQp"/>
+                        <segue destination="2CS-2m-SvD" kind="relationship" relationship="viewControllers" id="qE3-vi-jUl"/>
+                        <segue destination="P7q-ON-B60" kind="relationship" relationship="viewControllers" id="Hdh-lA-tzV"/>
+                        <segue destination="bHy-QH-RJU" kind="relationship" relationship="viewControllers" id="6j6-lu-G3n"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQn-wb-Tw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="-129"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="AAH-4j-oLb">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="apps.iphone.landscape" catalog="system" width="128" height="75"/>
+        <image name="article" width="25" height="25"/>
+        <image name="article_selected" width="25" height="25"/>
+        <image name="back" width="50" height="50"/>
+        <image name="chat" width="25" height="25"/>
+        <image name="chat_selected" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="settings_selected" width="25" height="25"/>
+        <image name="yoga" width="128" height="128"/>
+        <image name="yoga_selected" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
