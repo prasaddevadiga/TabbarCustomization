@@ -13,8 +13,8 @@ class CustomTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tabBar.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        self.tabBar.backgroundColor = .clear
+        
     }
     
     override func viewWillLayoutSubviews() {

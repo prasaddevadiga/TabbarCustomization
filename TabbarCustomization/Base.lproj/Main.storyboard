@@ -74,7 +74,7 @@
                             <constraint firstItem="zOg-ge-0h9" firstAttribute="centerX" secondItem="Z8r-tl-H5z" secondAttribute="centerX" id="oMY-4A-1MO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chats" image="chat" selectedImage="chat_selected" id="4RL-3e-KCo"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="chat" landscapeImage="chat" selectedImage="chat_selected" id="4RL-3e-KCo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iH5-wb-xua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +102,7 @@
                             <constraint firstItem="nDo-Dc-bnp" firstAttribute="top" secondItem="BVi-29-Bbc" secondAttribute="top" constant="60" id="nLr-t7-pqY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings_selected" id="wic-Jc-XbL"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" landscapeImage="settings" selectedImage="settings_selected" id="wic-Jc-XbL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWf-bu-jB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,9 +138,8 @@
                             <constraint firstItem="sXR-qM-e6i" firstAttribute="centerX" secondItem="1wu-hX-Mne" secondAttribute="centerX" id="z41-1p-27Q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Articles" image="article" selectedImage="article_selected" id="Yhs-ei-u6c">
+                    <tabBarItem key="tabBarItem" title="Articles" image="article" landscapeImage="article" selectedImage="article_selected" id="Yhs-ei-u6c">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ix8-k9-d2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,12 +154,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="may-ZE-Xbo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TopImageTableViewCell" rowHeight="400" id="EDB-0U-Fdy" customClass="TopImageTableViewCell" customModule="TabbarCustomization" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="400"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDB-0U-Fdy" id="fJt-bn-uUT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopImage" translatesAutoresizingMaskIntoConstraints="NO" id="kyv-lb-8lu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="358"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="360" id="I8o-o9-u5P"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csn-vb-61i">
+                                                    <rect key="frame" x="40" y="324" width="334" height="60"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="jl5-Rp-jIv"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kyv-lb-8lu" secondAttribute="bottom" constant="42" id="Cq9-cO-p1V"/>
+                                                <constraint firstAttribute="trailing" secondItem="kyv-lb-8lu" secondAttribute="trailing" id="F9b-5R-liK"/>
+                                                <constraint firstAttribute="trailing" secondItem="csn-vb-61i" secondAttribute="trailing" constant="40" id="INa-k3-kbw"/>
+                                                <constraint firstItem="csn-vb-61i" firstAttribute="leading" secondItem="fJt-bn-uUT" secondAttribute="leading" constant="40" id="Sou-bV-WEj"/>
+                                                <constraint firstItem="kyv-lb-8lu" firstAttribute="leading" secondItem="fJt-bn-uUT" secondAttribute="leading" id="gGh-fk-8Un"/>
+                                                <constraint firstItem="kyv-lb-8lu" firstAttribute="top" secondItem="fJt-bn-uUT" secondAttribute="top" id="hFZ-Xt-nD0"/>
+                                                <constraint firstAttribute="bottom" secondItem="csn-vb-61i" secondAttribute="bottom" constant="16" id="jc4-4N-eef"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ratingView" destination="csn-vb-61i" id="Ko1-cY-6Mg"/>
+                                            <outlet property="topImageView" destination="kyv-lb-8lu" id="b2h-eJ-LuM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Iqx-xV-sqI" id="Bso-Za-2bC"/>
+                                    <outlet property="delegate" destination="Iqx-xV-sqI" id="17J-If-mwc"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPQ-OA-sMs">
-                                <rect key="frame" x="16" y="16" width="33" height="33"/>
+                                <rect key="frame" x="16" y="60" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="33" id="K4c-ET-ZR8"/>
-                                    <constraint firstAttribute="height" constant="33" id="bw2-x8-9vk"/>
+                                    <constraint firstAttribute="width" constant="44" id="K4c-ET-ZR8"/>
+                                    <constraint firstAttribute="height" constant="44" id="bw2-x8-9vk"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="backButtonClicked:" destination="Iqx-xV-sqI" eventType="touchUpInside" id="33S-sZ-HmY"/>
@@ -170,15 +217,22 @@
                         <viewLayoutGuide key="safeArea" id="wCx-ye-IAk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xPQ-OA-sMs" firstAttribute="top" secondItem="wCx-ye-IAk" secondAttribute="top" constant="16" id="ZL2-GE-LQ8"/>
+                            <constraint firstItem="may-ZE-Xbo" firstAttribute="leading" secondItem="wCx-ye-IAk" secondAttribute="leading" id="IhV-R4-cv8"/>
+                            <constraint firstItem="may-ZE-Xbo" firstAttribute="top" secondItem="2vE-rr-vzg" secondAttribute="top" id="Oc7-T9-f2x"/>
+                            <constraint firstItem="xPQ-OA-sMs" firstAttribute="top" secondItem="2vE-rr-vzg" secondAttribute="top" constant="60" id="ZL2-GE-LQ8"/>
+                            <constraint firstAttribute="bottom" secondItem="may-ZE-Xbo" secondAttribute="bottom" id="Zkw-Me-ylk"/>
+                            <constraint firstItem="wCx-ye-IAk" firstAttribute="trailing" secondItem="may-ZE-Xbo" secondAttribute="trailing" id="kBE-1F-wkp"/>
                             <constraint firstItem="xPQ-OA-sMs" firstAttribute="leading" secondItem="wCx-ye-IAk" secondAttribute="leading" constant="16" id="nNy-cp-cnx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Yoga" image="yoga" landscapeImage="apps.iphone.landscape" catalog="system" selectedImage="yoga_selected" id="sft-dj-fFS"/>
+                    <tabBarItem key="tabBarItem" title="Yoga" image="yoga" landscapeImage="yoga" selectedImage="yoga_selected" id="sft-dj-fFS"/>
+                    <connections>
+                        <outlet property="tableView" destination="may-ZE-Xbo" id="Nir-Ld-K6I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQX-iG-uZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="-433"/>
+            <point key="canvasLocation" x="676.81159420289862" y="-433.25892857142856"/>
         </scene>
         <!--Custom Tab Bar View Controller-->
         <scene sceneID="Hwo-yd-406">
@@ -209,7 +263,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="apps.iphone.landscape" catalog="system" width="128" height="75"/>
+        <image name="TopImage" width="500" height="333.5"/>
         <image name="article" width="25" height="25"/>
         <image name="article_selected" width="25" height="25"/>
         <image name="back" width="50" height="50"/>
@@ -217,8 +271,8 @@
         <image name="chat_selected" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="settings_selected" width="25" height="25"/>
-        <image name="yoga" width="128" height="128"/>
-        <image name="yoga_selected" width="128" height="128"/>
+        <image name="yoga" width="25" height="25"/>
+        <image name="yoga_selected" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

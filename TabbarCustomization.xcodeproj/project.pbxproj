@@ -30,6 +30,8 @@
 		22703A9F25A03E4D00E2D903 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22703A9625A03E4D00E2D903 /* Ubuntu-Italic.ttf */; };
 		22703AA025A03E4D00E2D903 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22703A9725A03E4D00E2D903 /* Ubuntu-Light.ttf */; };
 		22703AA125A03E4D00E2D903 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22703A9825A03E4D00E2D903 /* UFL.txt */; };
+		22703AB425A067D700E2D903 /* YogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703AB325A067D700E2D903 /* YogaViewController.swift */; };
+		22703AB925A06B0100E2D903 /* TopImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		22703A9625A03E4D00E2D903 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
 		22703A9725A03E4D00E2D903 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		22703A9825A03E4D00E2D903 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
+		22703AB325A067D700E2D903 /* YogaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaViewController.swift; sourceTree = "<group>"; };
+		22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				22144CA5259F64FA007B7E50 /* HomeViewController.swift */,
+				22703AB325A067D700E2D903 /* YogaViewController.swift */,
+				22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,8 +346,10 @@
 			files = (
 				22144C93259EF3C9007B7E50 /* CustomTabbar.swift in Sources */,
 				22144CA0259F1B28007B7E50 /* CustomTabBarViewController.swift in Sources */,
+				22703AB425A067D700E2D903 /* YogaViewController.swift in Sources */,
 				22144C63259EF394007B7E50 /* ViewController.swift in Sources */,
 				22144C5F259EF394007B7E50 /* AppDelegate.swift in Sources */,
+				22703AB925A06B0100E2D903 /* TopImageTableViewCell.swift in Sources */,
 				22144CB0259F7904007B7E50 /* Color_extension.swift in Sources */,
 				22144C61259EF394007B7E50 /* SceneDelegate.swift in Sources */,
 				22144CA6259F64FA007B7E50 /* HomeViewController.swift in Sources */,
