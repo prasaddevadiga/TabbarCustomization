@@ -12,12 +12,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.edgesForExtendedLayout = UIRectEdge.bottom
         self.view.backgroundColor = .green
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        guard let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? TopImageTableViewCell else {
+            self.dismiss(animated: false, completion: nil)
+            return
+        }
+        
+        cell.dismissAnimation { (success) in
+            self.dismiss(animated: false, completion: nil)
+        }
     }
 }
 

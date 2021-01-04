@@ -10,27 +10,37 @@ import UIKit
 class TopImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topImageView: UIImageView!
-    @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var ratingView: RatingView!
+    @IBOutlet weak var ratingBarRightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var ratingBarLeftConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        maskTheImage()
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = UIBezierPath.init(roundedRect: ratingView.bounds,
-                                     byRoundingCorners: [.allCorners],
-                                     cornerRadii: CGSize(width:50, height:25)).cgPath
-//        self.ratingView.layer.masksToBounds = true
-//        self.ratingView.layer.mask = shapeLayer
-        
-        ratingView.layer.shadowColor = UIColor.black.cgColor
-        ratingView.layer.shadowOffset = CGSize(width: -0.0, height: -5.0)
-        ratingView.layer.shadowOpacity = 0.2
-        ratingView.layer.shadowRadius = 15.0
+        maskTopImage()
+        presentAnimation()
     }
 
-    func maskTheImage() {
+    func presentAnimation() {
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+            self.ratingBarLeftConstraint.constant = 40
+            self.ratingBarRightConstraint.constant = 40
+            self.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    func dismissAnimation(completion: @escaping ((Bool) -> Void)) {
+        
+        UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseIn, animations: {
+            self.ratingBarLeftConstraint.constant = 140
+            self.ratingBarRightConstraint.constant = 140
+            self.layoutIfNeeded()
+        }, completion: {(sucess) in
+            completion(sucess)
+        })
+    }
+    
+    func maskTopImage() {
         
         let gradient = CAGradientLayer()
         gradient.frame = self.topImageView.bounds

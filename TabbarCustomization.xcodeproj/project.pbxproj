@@ -32,6 +32,8 @@
 		22703AA125A03E4D00E2D903 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22703A9825A03E4D00E2D903 /* UFL.txt */; };
 		22703AB425A067D700E2D903 /* YogaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703AB325A067D700E2D903 /* YogaViewController.swift */; };
 		22703AB925A06B0100E2D903 /* TopImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */; };
+		2298504025A212A400DA3585 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2298503F25A212A400DA3585 /* RatingView.swift */; };
+		2298504525A212B300DA3585 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2298504425A212B300DA3585 /* RatingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		22703A9825A03E4D00E2D903 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
 		22703AB325A067D700E2D903 /* YogaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaViewController.swift; sourceTree = "<group>"; };
 		22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageTableViewCell.swift; sourceTree = "<group>"; };
+		2298503F25A212A400DA3585 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		2298504425A212B300DA3585 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 				22144CA5259F64FA007B7E50 /* HomeViewController.swift */,
 				22703AB325A067D700E2D903 /* YogaViewController.swift */,
 				22703AB825A06B0100E2D903 /* TopImageTableViewCell.swift */,
+				2298503F25A212A400DA3585 /* RatingView.swift */,
+				2298504425A212B300DA3585 /* RatingView.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				22703A9F25A03E4D00E2D903 /* Ubuntu-Italic.ttf in Resources */,
 				22703AA025A03E4D00E2D903 /* Ubuntu-Light.ttf in Resources */,
 				22703A9E25A03E4D00E2D903 /* Ubuntu-BoldItalic.ttf in Resources */,
+				2298504525A212B300DA3585 /* RatingView.xib in Resources */,
 				22144C66259EF394007B7E50 /* Main.storyboard in Resources */,
 				22144C9B259F0A24007B7E50 /* yoga.png in Resources */,
 				22703A9C25A03E4D00E2D903 /* Ubuntu-Bold.ttf in Resources */,
@@ -347,6 +354,7 @@
 				22144C93259EF3C9007B7E50 /* CustomTabbar.swift in Sources */,
 				22144CA0259F1B28007B7E50 /* CustomTabBarViewController.swift in Sources */,
 				22703AB425A067D700E2D903 /* YogaViewController.swift in Sources */,
+				2298504025A212A400DA3585 /* RatingView.swift in Sources */,
 				22144C63259EF394007B7E50 /* ViewController.swift in Sources */,
 				22144C5F259EF394007B7E50 /* AppDelegate.swift in Sources */,
 				22703AB925A06B0100E2D903 /* TopImageTableViewCell.swift in Sources */,

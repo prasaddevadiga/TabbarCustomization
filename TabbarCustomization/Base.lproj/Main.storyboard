@@ -24,21 +24,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-Dq-RO9">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="qRH-bb-kpz" kind="show" id="ncL-Og-bc5"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyg-4m-gsY">
+                                <rect key="frame" x="131" y="325" width="152" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-Dq-RO9">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="44"/>
+                                        <color key="backgroundColor" red="0.72549019607843135" green="0.62745098039215685" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="KUt-68-EyG"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="eE2-FR-7ji"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qRH-bb-kpz" kind="show" id="ncL-Og-bc5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="YIm-Dq-RO9" firstAttribute="top" secondItem="gyg-4m-gsY" secondAttribute="top" id="S8C-4P-Yst"/>
+                                    <constraint firstAttribute="trailing" secondItem="YIm-Dq-RO9" secondAttribute="trailing" id="ZRa-BI-vmO"/>
+                                    <constraint firstItem="YIm-Dq-RO9" firstAttribute="leading" secondItem="gyg-4m-gsY" secondAttribute="leading" id="eQq-X0-HuV"/>
+                                    <constraint firstAttribute="bottom" secondItem="YIm-Dq-RO9" secondAttribute="bottom" id="iHJ-qs-C5w"/>
+                                    <constraint firstItem="YIm-Dq-RO9" firstAttribute="width" secondItem="gyg-4m-gsY" secondAttribute="width" id="pao-hp-Ufx"/>
+                                    <constraint firstItem="YIm-Dq-RO9" firstAttribute="height" secondItem="gyg-4m-gsY" secondAttribute="height" id="ziI-9M-V0h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YIm-Dq-RO9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Lh-f4-ixU"/>
-                            <constraint firstItem="YIm-Dq-RO9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O1p-Zu-C0Y"/>
+                            <constraint firstItem="gyg-4m-gsY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Aa-dz-VS7"/>
+                            <constraint firstItem="gyg-4m-gsY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="325" id="uaV-cJ-RSl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonBackground" destination="gyg-4m-gsY" id="LKR-BU-5NH"/>
+                        <outlet property="startButton" destination="YIm-Dq-RO9" id="hbq-cI-drU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,8 +198,8 @@
                                                         <constraint firstAttribute="height" constant="360" id="I8o-o9-u5P"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csn-vb-61i">
-                                                    <rect key="frame" x="40" y="324" width="334" height="60"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csn-vb-61i" customClass="RatingView" customModule="TabbarCustomization" customModuleProvider="target">
+                                                    <rect key="frame" x="140" y="324" width="134" height="60"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="jl5-Rp-jIv"/>
@@ -183,14 +209,16 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="kyv-lb-8lu" secondAttribute="bottom" constant="42" id="Cq9-cO-p1V"/>
                                                 <constraint firstAttribute="trailing" secondItem="kyv-lb-8lu" secondAttribute="trailing" id="F9b-5R-liK"/>
-                                                <constraint firstAttribute="trailing" secondItem="csn-vb-61i" secondAttribute="trailing" constant="40" id="INa-k3-kbw"/>
-                                                <constraint firstItem="csn-vb-61i" firstAttribute="leading" secondItem="fJt-bn-uUT" secondAttribute="leading" constant="40" id="Sou-bV-WEj"/>
+                                                <constraint firstAttribute="trailing" secondItem="csn-vb-61i" secondAttribute="trailing" constant="140" id="INa-k3-kbw"/>
+                                                <constraint firstItem="csn-vb-61i" firstAttribute="leading" secondItem="fJt-bn-uUT" secondAttribute="leading" constant="140" id="Sou-bV-WEj"/>
                                                 <constraint firstItem="kyv-lb-8lu" firstAttribute="leading" secondItem="fJt-bn-uUT" secondAttribute="leading" id="gGh-fk-8Un"/>
                                                 <constraint firstItem="kyv-lb-8lu" firstAttribute="top" secondItem="fJt-bn-uUT" secondAttribute="top" id="hFZ-Xt-nD0"/>
                                                 <constraint firstAttribute="bottom" secondItem="csn-vb-61i" secondAttribute="bottom" constant="16" id="jc4-4N-eef"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ratingBarLeftConstraint" destination="Sou-bV-WEj" id="Sed-xT-NB0"/>
+                                            <outlet property="ratingBarRightConstraint" destination="INa-k3-kbw" id="Cx5-SQ-PYC"/>
                                             <outlet property="ratingView" destination="csn-vb-61i" id="Ko1-cY-6Mg"/>
                                             <outlet property="topImageView" destination="kyv-lb-8lu" id="b2h-eJ-LuM"/>
                                         </connections>
